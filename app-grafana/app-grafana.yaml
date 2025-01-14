@@ -23,6 +23,6 @@ spec:
       chart: app-grafana
       sourceRef:
         kind: HelmRepository
-        name: grafana
+        name: grafana-repo
       version: 8.8.2
   interval: 10m0s
