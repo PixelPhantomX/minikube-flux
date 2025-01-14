@@ -20,7 +20,7 @@ metadata:
 spec:
   chart:
     spec:
-      chart: app-grafana
+      chart: grafana
       sourceRef:
         kind: HelmRepository
         name: grafana-repo
