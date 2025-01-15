@@ -1,5 +1,4 @@
 mongodb:
   auth:
-    passwords:
-      - rocketchat
-    rootPassword: rocketchatroot
+    passwords: "rocketchat"
+    rootPassword: "rocketchatroot"
