@@ -1,28 +1,28 @@
 apiVersion: v1
 kind: Namespace
 metadata:
-  name: app-rocketchat
+  name: app-prometheus
 ---
 apiVersion: source.toolkit.fluxcd.io/v1
 kind: HelmRepository
 metadata:
-  name: rocketchat-repo
-  namespace: app-rocketchat
+  name: prometheus-repo
+  namespace: app-prometheus
 spec:
   interval: 5m0s
-  url: https://rocketchat.github.io/helm-charts
+  url: https://prometheus-community.github.io/helm-charts
 ---
 apiVersion: helm.toolkit.fluxcd.io/v2
 kind: HelmRelease
 metadata:
-  name: app-rocketchat
-  namespace: app-rocketchat
+  name: app-prometheus
+  namespace: app-prometheus
 spec:
   chart:
     spec:
-      chart: rocketchat
+      chart: prometheus
       sourceRef:
         kind: HelmRepository
-        name: rocketchat-repo
-      version: 6.23.2
+        name: prometheus-repo
+      version: 26.1.0
   interval: 10m0s

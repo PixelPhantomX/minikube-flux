@@ -3,4 +3,4 @@ kind: Kustomization
 resources:
 - app-grafana
 - flux-system
-- app-rocketchat
+- app-prometheus
